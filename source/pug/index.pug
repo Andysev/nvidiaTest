@@ -5,8 +5,38 @@ block title
 
 block main
 
-	main(role='main')
-		include blocks/pages/home/intro
+		.mainPage 
+			.main_title ПРЕИМУЩЕСТВА G-SYNC
+			.main_title-text Каждый монитор с технологией G-SYNC проходит серьезное тестирование и контроль качества для обеспечения максимальной производительности. Сотни мониторов проходят контроль качества, но только прошедшие все тесты получают сертификацию G-SYNC.
+			.eye_blocks 
+				.eye_block 
+					.eye_img 
+						img(src="img/eyecircle.svg", alt="")
+					.eye_title HDR 
+						span DISPLAY
+					.eye_text Получите более широкий и комфортный для восприятия диапазон цветовой гаммы, чем в обычных мониторах.
+				.eye_block 
+					.eye_img 
+						img(src="img/eyeclock.svg", alt="")
+					.eye_title INPUT 
+						span LAG
+					.eye_text Мониторы с технологией G-SYNC обеспечивают минимальную задержку между нажатием клавиш и результатом на экране, что очень важно для геймеров.
+				.eye_block 
+					.eye_img 
+						img(src="img/eyeclock.svg", alt="")
+					.eye_title INPUT 
+						span LAG
+					.eye_text Мониторы с технологией G-SYNC обеспечивают минимальную задержку между нажатием клавиш и результатом на экране, что очень важно для геймеров.
+				.eye_block 
+					.eye_img 
+						img(src="img/eyeclock.svg", alt="")
+					.eye_title INPUT 
+						span LAG
+					.eye_text Мониторы с технологией G-SYNC обеспечивают минимальную задержку между нажатием клавиш и результатом на экране, что очень важно для геймеров.
+			a.buy_btn(href="#") Купить
+			
+						
+
 
 block modal
 	include modal/hello

@@ -21,3 +21,308 @@
 @import "global/**/*.scss";
 @import "blocks/**/*.scss";
 @import "ui/**/*.scss";
+
+.container{
+
+}
+.mainPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/bg.jpg);
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-bottom: 165px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.main_title{
+    font-size: 26px;
+    width: 700px;
+    margin-top: 60px;
+    color: #fff;
+    text-align: center;
+}
+.main_title-text{
+    font-size: 16px;
+    margin-top: 20px;
+    max-width: 730px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.eye_blocks{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.eye_block{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.eye_title{
+    margin-top: 37px;
+    color: #77B900;
+    font-size: 26px;
+    font-weight: 700;
+    span{
+        color: #fff;
+        font-weight: 400;
+    }
+}
+.eye_text{
+    max-width: 255px;
+    width: 100%;
+    font-size: 16px;
+    color: $white;
+}
+.buy_btn{
+    width: 192px;
+    height: 56px;
+    background-color: #77B900;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 60px 15px 60px;
+    margin-top: 67px;
+    text-align: center;
+    &:hover{
+        color: #fff;
+        background-color: #000;
+        border: 1px solid #77B900;
+        box-shadow: 0px 0px 10px #77B900;
+    }
+}
+//header
+.header_line {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 33px;
+    background-color: black;
+    align-items: center;
+}
+.header_logo{
+    margin-left: 170px;
+    width: 81px;
+    height: 60px;
+    img{
+        max-width:none;
+        height: 100%;
+    }
+}
+.header_list{
+    margin-left: 43px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+  
+    > li{
+        list-style: none;
+        margin-right: 48px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+.header_social {
+    margin-right: 160px;
+    margin-left: auto;
+    align-items: center;
+    display: flex;
+}
+.twitter,.insta
+{ margin-right: 33px;
+    width: 30px;
+    &:hover{
+        svg{
+            path{
+            fill: #77B900;
+            }
+        }
+    }
+}
+//header mob
+$bar-width: 25px;
+$bar-height: 2px;
+$bar-spacing: 5px;
+
+.menu-wrapper {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  padding: 22px 16px;
+}
+.menu-wrapper.animate{
+    background-color: #77B900;
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: $bar-width;
+	height: $bar-height;
+}
+
+.hamburger-menu {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: rgba(255, 255, 255, 1);
+	transition: all 0ms 300ms;
+  
+  &.animate {
+    background: rgba(255, 255, 255, 0); 
+  }
+}
+
+.hamburger-menu:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: $bar-spacing;
+	background: rgba(255, 255, 255, 1);
+	transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: $bar-spacing;
+	background: rgba(255, 255, 255, 1);
+	transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.header_mob-menu{
+    display: none;
+}
+//header mob end
+//Modal
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 100px;
+   
+}
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 237px;
+    width: 540px;
+    height: 410px;
+    background-color: #000;
+    align-items: center;
+    margin: auto;
+    left: 0;    
+    right: 0;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: .6s
+}
+@-webkit-keyframes animatetop {
+    from {top: 0px; opacity:0} 
+    to {top: 237px; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top: 0px; opacity:0}
+    to {top: 237px; opacity:1}
+}
+.modal_visible{
+    display: flex;
+}
+.modal_title{
+    font-size: 26px;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+}
+.modal_cross{
+    width: 100%;
+    padding-right: 49px;
+    padding-top: 14px;
+    background-color: #000;
+    display: flex;
+    justify-content: end;
+}
+.modal_close{
+    height: 10px;
+    background-color: #000;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    &::before{
+        bottom: 10px;
+        transform: rotate(-45deg);
+        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        background: $white;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 25px;
+        height: 4px;
+    }
+    &::after{
+    	top: 12px;
+        transform: rotate(45deg);
+        transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+        background-color: $white;
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 25px;
+        height: 4px;
+    }
+}
+.modal_input_name {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    input{
+        padding: 14px 20px 14px;
+        font-size: 16px;
+    }
+}
+.modal_input_mail{
+    input{
+        padding: 14px 20px 14px;
+        font-size: 16px;
+    }
+}
+.modal_btn{
+    width: 192px;
+    height: 56px;
+    background-color: #77B900;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 60px 15px 60px;
+    margin-top: 20px;
+    text-align: center;
+    &:hover{
+        color: #fff;
+    }
+}
+//Modal end
+//animation modal
+
+//animation end
+//footer
+.footer{
+    width: 100%;
+    
+    background-color: black;
+}
+
+@import 'media';

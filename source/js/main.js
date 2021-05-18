@@ -20,4 +20,41 @@ $(document).ready(function(){
 	// 			duration: 300
 	// 		}
 	// 	});
+	$('.menu-wrapper').on('click', function() {
+		$('.menu-wrapper').toggleClass('animate');
+		$('.header_mob-menu').toggleClass('header_mob-menu-active');
+		
+	});
+	// $('.modal_close').on('click', function() {
+	// 	$('.modal').toggleClass('modal_visible');
+	// });
+	// $('.buy_btn').on('click', function() {
+	// 	$('.modal').toggleClass('modal_visible');
+	// });
+	
+	function modalFunc() {
+		var modal = document.querySelector('.modal ');
+		var modalContent = document.querySelector('.modal_content ');
+		var btn = document.querySelector(".buy_btn");
+		var span = document.querySelector(".modal_close");
+		var buy = document.querySelector(".modal_btn")
+	
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+		
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+		buy.onclick = function() {
+			modal.style.display = "none";
+		}
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	}
+	modalFunc();
+	
 });

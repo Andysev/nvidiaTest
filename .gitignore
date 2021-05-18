@@ -4,7 +4,7 @@ node_modules
 
 ## Compilations
 #-------------------------
-dist
+
 
 ## Trash
 #-------------------------
@@ -25,3 +25,5 @@ desktop.ini
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+
+source/
